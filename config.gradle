@@ -22,6 +22,36 @@ ext {
             daggerAndroid : "com.google.dagger:dagger-android:${daggerVersion}",
             daggerAndroidSupport :"com.google.dagger:dagger-android-support:${daggerVersion}",
             daggerAndroidProcessor :"com.google.dagger:dagger-android-processor:${daggerVersion}",
+            okhttp3 : "com.squareup.okhttp3:okhttp:4.7.2",
+
+            /**
+             * 网络部分*/
+            // Retrofit
+            retrofit: "com.squareup.retrofit2:retrofit:2.6.0",
+            retrofitGson: "com.squareup.retrofit2:converter-gson:2.6.0",
+            retrofitAdapter: "com.squareup.retrofit2:adapter-rxjava2:2.6.0",
+            retorfitConverterScalar      : "com.squareup.retrofit2:converter-scalars:2.6.0",
+
+            // OkHttp3
+            okhttp3: "com.squareup.okhttp3:okhttp:3.12.3",
+            okhttp3logging: "com.squareup.okhttp3:logging-interceptor:3.12.0",
+
+            // RxJava3
+            rxJava: "io.reactivex.rxjava3:rxjava:3.0.0",
+            rxAndroid : "io.reactivex.rxjava3:rxandroid:3.0.0",
+
+            // RxLifecycle
+            rxlifecycle: "com.trello.rxlifecycle2:rxlifecycle:2.2.2",
+            rxlifecycleAndroid: "com.trello.rxlifecycle2:rxlifecycle-android:2.2.2",
+            rxlifecycleComponent: "com.trello.rxlifecycle2:rxlifecycle-components:2.2.1",
+
+            //cookie
+            cookiejar :  "com.github.franmontiel:PersistentCookieJar:v1.0.1",
+
+
+            /**logger*/
+            logger: "com.orhanobut:logger:2.2.0"
+
 
     ]
 
