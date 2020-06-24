@@ -8,7 +8,7 @@ import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
 import javax.net.ssl.*
 
-class HttpsUtils {
+open class HttpsUtils {
 
      companion object{
          /**

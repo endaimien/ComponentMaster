@@ -22,7 +22,7 @@ import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 
 @Module
-class HttpModule constructor(){
+class HttpModule{
     private val HTTP_RESPONSE_DISK_CACHE_MAX_SIZE = 10 * 1024 * 1024 // 缓存文件最大值为 10Mb
 
     private val DEFAULT_BASEURL = "https://api.github.com/"
@@ -31,7 +31,7 @@ class HttpModule constructor(){
     private val READE_TOME_OUT = 15
 
     /**OkHttp配置*/
-    lateinit var sslSocketFactory: SSLSocketFactory
+    var sslSocketFactory: SSLSocketFactory?=null
     lateinit var trustManager: X509TrustManager
     lateinit var cacheIntercepter: CacheIntercepter
     lateinit var verifier: HostnameVerifier
@@ -61,7 +61,7 @@ class HttpModule constructor(){
             .writeTimeout(WRITE_TOME_OUT.toLong(), TimeUnit.SECONDS)
             .cookieJar(cookieJar)
             .cache(cache)
-            .sslSocketFactory(sslSocketFactory, trustManager)
+            .sslSocketFactory(sslSocketFactory)
             .hostnameVerifier(verifier)
         for (a in intercepterset) {
             okHttpClientBuilder.addInterceptor(a)

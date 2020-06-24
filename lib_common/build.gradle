@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 
 android {
     compileSdkVersion 29
@@ -29,5 +31,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    def dataDependences = rootProject.ext.dataDependencies
+    //def supportDependences = rootProject.ext.sdksoupportDependencies
+    //dagger
+    kapt dataDependences.daggerCompiler
+    kapt dataDependences.daggerAndroidProcessor
 
 }
